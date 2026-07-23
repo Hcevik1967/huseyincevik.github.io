@@ -167,39 +167,6 @@
         .service-card h3 { margin-bottom: 10px; color: #0b5ed7; font-size: 1.2rem; }
         .service-card p { color: #5c636a; font-size: 0.95rem; }
 
-        /* Şiir Kitapları */
-        .siir-grid {
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            flex-wrap: wrap;
-        }
-        .siir-card {
-            background: white;
-            border-radius: 14px;
-            overflow: hidden;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-            width: 220px;
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
-        }
-        .siir-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-        }
-        .siir-card img {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            display: block;
-        }
-        .siir-card p {
-            text-align: center;
-            padding: 14px 10px;
-            font-weight: 600;
-            color: #0b5ed7;
-            font-size: 0.95rem;
-        }
-
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -258,7 +225,6 @@
             <nav>
                 <a href="#hakkimda">Hakkımda</a>
                 <a href="#hizmetler">Hizmetler</a>
-                <a href="#siir">Şiir Kitapları</a>
                 <a href="#iletisim">İletişim</a>
             </nav>
         </div>
@@ -276,3 +242,110 @@
                 <a href="#iletisim" class="btn">Randevu Al / İletişim</a>
 
                 <p class="onam-note">
+                    Lütfen işlemden önce onam formlarını okuyun, 
+                    sormak istediklerinizi sorun ve muayenehanede size verilecek kâğıdı imzalayın.
+                </p>
+
+                <div class="onam-links">
+                    <a href="tedavi%20onam.pdf" target="_blank">Tedavi Onam</a>
+                    <a href="cerrahi%20onam.pdf" target="_blank">Cerrahi Onam</a>
+                    <a href="ortodonti%20onam.pdf" target="_blank">Ortodonti Onam</a>
+                    <a href="protez%20onam.pdf" target="_blank">Protez Onam</a>
+                </div>
+            </div>
+
+            <img src="WhatsApp%20Image%202026-07-22%20at%2018.03.23.jpeg" alt="Klinik" class="hero-photo">
+        </div>
+    </section>
+
+    <section id="hakkimda">
+        <div class="container">
+            <h2 class="section-title">Hakkımda</h2>
+            <p class="section-subtitle">Güvenilir ve hasta odaklı diş hekimliği</p>
+            
+            <div class="about-card">
+                <div class="about-logo">
+                    <img src="logo.jpeg" alt="Logo">
+                </div>
+                <div class="about-text">
+                    2004 yılından bu yana Trabzon’da diş hekimliği yapıyorum. 
+                    Ege Üniversitesi Diş Hekimliği Fakültesi mezunuyum. 
+                    Hastalarımın ağız ve diş sağlığını en üst düzeyde korumak, 
+                    doğal ve sağlıklı gülüşler kazandırmak için modern tedavi yöntemleriyle hizmet veriyorum.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hizmetler">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerimiz</h2>
+            <p class="section-subtitle">Kapsamlı ağız ve diş sağlığı çözümleri</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Genel Diş Tedavisi</h3>
+                    <p>Dolgu, kanal tedavisi, diş çekimi ve düzenli kontroller</p>
+                </div>
+                <div class="service-card">
+                    <h3>Estetik Diş Hekimliği</h3>
+                    <p>Diş beyazlatma, bonding ve laminate veneer uygulamaları</p>
+                </div>
+                <div class="service-card">
+                    <h3>Protez & İmplant</h3>
+                    <p>Sabit / hareketli protezler ve implant üstü restorasyonlar</p>
+                </div>
+                <div class="service-card">
+                    <h3>Koruyucu Tedavi</h3>
+                    <p>Diş taşı temizliği, flor uygulamaları ve ağız bakımı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <p class="section-subtitle">Randevu ve bilgi için bize ulaşın</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📍 Adres</h3>
+                    <div class="contact-item">
+                        <strong>Klinik Adresi</strong>
+                        <span>
+                            Fatih Mahallesi<br>
+                            Osman Turan Caddesi<br>
+                            Canım Sitesi A Blok<br>
+                            No: 4  Kat: 1  Daire: 2<br>
+                            Ortahisar / Trabzon
+                        </span>
+                    </div>
+                    <a href="https://maps.google.com/?q=Fatih+Mahallesi+Osman+Turan+Caddesi+Canım+Sitesi+Ortahisar+Trabzon" 
+                       target="_blank" class="map-link">Haritada Göster →</a>
+                </div>
+
+                <div class="contact-card">
+                    <h3>📞 Telefon & E-posta</h3>
+                    <div class="contact-item">
+                        <strong>Telefon</strong>
+                        <a href="tel:+904622236971">0462 223 69 71</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>E-posta</strong>
+                        <a href="mailto:dt_cevik@hotmail.com">dt_cevik@hotmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Randevu</strong>
+                        <span>Randevu için lütfen telefonla arayınız.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2026 Diş Hekimi Hüseyin Çevik · Trabzon</p>
+        </div>
+    </footer>
+</body>
+</html>
