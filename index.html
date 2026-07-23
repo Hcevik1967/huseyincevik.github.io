@@ -12,21 +12,30 @@
         header {
             background: white;
             border-bottom: 1px solid #e9ecef;
-            padding: 14px 0;
+            padding: 16px 0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         }
-        .header-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 52px; width: auto; display: block; }
-        nav a { color: #1a1a1a; text-decoration: none; margin-left: 28px; font-weight: 500; }
+        .header-inner { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        nav a { 
+            color: #1a1a1a; 
+            text-decoration: none; 
+            margin: 0 18px; 
+            font-weight: 500; 
+            font-size: 1rem;
+        }
         nav a:hover { color: #0b5ed7; }
 
         .hero {
             background: linear-gradient(135deg, #0b5ed7 0%, #084298 100%);
             color: white;
-            padding: 45px 0 55px;
+            padding: 50px 0 60px;
         }
         .hero-inner {
             display: flex;
@@ -76,30 +85,31 @@
             margin-bottom: 18px;
         }
         .onam-note {
-            font-size: 0.92rem;
-            opacity: 0.9;
-            max-width: 420px;
-            margin: 0 auto 12px;
-            line-height: 1.5;
+            font-size: 0.95rem;
+            opacity: 0.95;
+            max-width: 480px;
+            margin: 0 auto 14px;
+            line-height: 1.55;
         }
         .onam-links {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 10px;
-            margin-top: 8px;
+            gap: 12px;
+            margin-top: 10px;
         }
         .onam-links a {
-            background: rgba(255,255,255,0.18);
+            background: rgba(255,255,255,0.2);
             color: white;
-            padding: 7px 14px;
-            border-radius: 20px;
+            padding: 9px 18px;
+            border-radius: 25px;
             text-decoration: none;
-            font-size: 0.85rem;
-            border: 1px solid rgba(255,255,255,0.3);
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.35);
         }
         .onam-links a:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.35);
         }
 
         section { padding: 70px 0; }
@@ -115,7 +125,6 @@
             border-radius: 2px;
         }
 
-        /* Hakkımda - logo + yazı yan yana */
         .about-card {
             background: white;
             border-radius: 16px;
@@ -128,7 +137,7 @@
             gap: 40px;
         }
         .about-logo {
-            width: 140px;
+            width: 130px;
             flex-shrink: 0;
         }
         .about-logo img {
@@ -204,19 +213,15 @@
             .hero-inner { flex-direction: column; gap: 22px; }
             .hero-photo { width: 140px; height: 140px; }
             .hero-text h1 { font-size: 1.85rem; }
-            nav { display: none; }
-            .header-inner { justify-content: center; }
             .about-card { flex-direction: column; text-align: center; gap: 25px; }
             .about-logo { width: 110px; }
+            nav a { margin: 0 12px; font-size: 0.95rem; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container header-inner">
-            <a href="#" class="logo">
-                <img src="logo.jpeg" alt="Logo">
-            </a>
             <nav>
                 <a href="#hakkimda">Hakkımda</a>
                 <a href="#hizmetler">Hizmetler</a>
@@ -237,11 +242,12 @@
                 <a href="#iletisim" class="btn">Randevu Al / İletişim</a>
 
                 <p class="onam-note">
-                    Lütfen tedavi onam formlarını işlemden önce okuyun, 
-                    sormak istediklerinizi sorun ve muayenehanede size verilen kâğıdı imzalayın.
+                    Lütfen işlemden önce onam formlarını okuyun, 
+                    sormak istediklerinizi sorun ve muayenehanede size verilecek kâğıdı imzalayın.
                 </p>
 
                 <div class="onam-links">
+                    <a href="tedavi%20onam.pdf" target="_blank">Tedavi Onam</a>
                     <a href="cerrahi%20onam.pdf" target="_blank">Cerrahi Onam</a>
                     <a href="ortodonti%20onam.pdf" target="_blank">Ortodonti Onam</a>
                     <a href="protez%20onam.pdf" target="_blank">Protez Onam</a>
