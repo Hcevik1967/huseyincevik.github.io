@@ -9,7 +9,6 @@
         :root {
             --primary: #0b5ed7;
             --primary-dark: #084298;
-            --accent: #0dcaf0;
             --text: #1a1a1a;
             --muted: #5c636a;
             --bg: #f4f7fb;
@@ -40,7 +39,7 @@
         header {
             background: var(--white);
             border-bottom: 1px solid var(--border);
-            padding: 14px 0;
+            padding: 16px 0;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -53,31 +52,10 @@
             align-items: center;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            text-decoration: none;
-            color: var(--text);
-        }
-
         .logo img {
-            height: 52px;
+            height: 58px;
             width: auto;
-        }
-
-        .logo-text {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1.25;
-        }
-
-        .logo-text span {
             display: block;
-            font-size: 0.82rem;
-            font-weight: 500;
-            color: var(--muted);
         }
 
         nav a {
@@ -97,16 +75,14 @@
         .hero {
             background: linear-gradient(135deg, #0b5ed7 0%, #084298 100%);
             color: white;
-            padding: 70px 0 80px;
+            padding: 80px 0 90px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
         }
 
         .hero h1 {
             font-size: 2.6rem;
             font-weight: 700;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             letter-spacing: -0.5px;
         }
 
@@ -120,14 +96,14 @@
             font-size: 1.05rem;
             font-style: italic;
             opacity: 0.85;
-            margin-bottom: 32px;
+            margin-bottom: 36px;
         }
 
         .btn {
             display: inline-block;
             background: white;
             color: var(--primary);
-            padding: 14px 32px;
+            padding: 14px 36px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -202,13 +178,11 @@
             text-align: center;
             box-shadow: 0 4px 16px rgba(0,0,0,0.05);
             transition: all 0.25s;
-            border: 1px solid transparent;
         }
 
         .service-card:hover {
             transform: translateY(-6px);
             box-shadow: 0 12px 30px rgba(11,94,215,0.12);
-            border-color: rgba(11,94,215,0.15);
         }
 
         .service-card h3 {
@@ -240,195 +214,7 @@
             color: var(--primary);
             margin-bottom: 20px;
             font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .contact-item {
-            margin-bottom: 18px;
-        }
-
-        .contact-item:last-child {
-            margin-bottom: 0;
-        }
-
-        .contact-item strong {
-            display: block;
-            font-size: 0.82rem;
-            color: var(--muted);
-            margin-bottom: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.4px;
-        }
-
-        .contact-item a,
-        .contact-item span {
-            color: var(--text);
-            text-decoration: none;
-            font-size: 1.05rem;
-            font-weight: 500;
-        }
-
-        .contact-item a:hover {
-            color: var(--primary);
-        }
-
-        .map-link {
-            display: inline-block;
-            margin-top: 12px;
-            color: var(--primary);
-            font-weight: 600;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        .map-link:hover {
-            text-decoration: underline;
-        }
-
-        /* Footer */
-        footer {
-            background: #111;
-            color: #999;
-            text-align: center;
-            padding: 28px 0;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            nav {
-                display: none;
-            }
-            .header-inner {
-                justify-content: center;
-            }
-            .logo img {
-                height: 44px;
-            }
-            section {
-                padding: 50px 0;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="container header-inner">
-            <a href="#" class="logo">
-                <img src="logo.jpg" alt="Dt. Hüseyin Çevik Logo">
-                <div class="logo-text">
-                    Dt. Hüseyin Çevik
-                    <span>Diş Hekimi · Trabzon</span>
-                </div>
-            </a>
-            <nav>
-                <a href="#hakkimda">Hakkımda</a>
-                <a href="#hizmetler">Hizmetler</a>
-                <a href="#iletisim">İletişim</a>
-            </nav>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Diş Hekimi Hüseyin Çevik</h1>
-            <p class="subtitle">2004’ten beri</p>
-            <p class="slogan">Dişe Dokunur Bir Yaşam İçin</p>
-            <a href="#iletisim" class="btn">Randevu Al / İletişim</a>
-        </div>
-    </section>
-
-    <section id="hakkimda">
-        <div class="container">
-            <h2 class="section-title">Hakkımda</h2>
-            <p class="section-subtitle">Güvenilir ve hasta odaklı diş hekimliği</p>
-            <div class="about-card">
-                <p>
-                    2004 yılından bu yana Trabzon’da diş hekimliği yapıyorum. 
-                    Ege Üniversitesi Diş Hekimliği Fakültesi mezunuyum. 
-                    Hastalarımın ağız ve diş sağlığını en üst düzeyde korumak, 
-                    doğal ve sağlıklı gülüşler kazandırmak için modern tedavi yöntemleriyle hizmet veriyorum.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="hizmetler">
-        <div class="container">
-            <h2 class="section-title">Hizmetlerimiz</h2>
-            <p class="section-subtitle">Kapsamlı ağız ve diş sağlığı çözümleri</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Genel Diş Tedavisi</h3>
-                    <p>Dolgu, kanal tedavisi, diş çekimi ve düzenli kontroller</p>
-                </div>
-                <div class="service-card">
-                    <h3>Estetik Diş Hekimliği</h3>
-                    <p>Diş beyazlatma, bonding ve laminate veneer uygulamaları</p>
-                </div>
-                <div class="service-card">
-                    <h3>Protez & İmplant</h3>
-                    <p>Sabit / hareketli protezler ve implant üstü restorasyonlar</p>
-                </div>
-                <div class="service-card">
-                    <h3>Koruyucu Tedavi</h3>
-                    <p>Diş taşı temizliği, flor uygulamaları ve ağız bakımı</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="iletisim">
-        <div class="container">
-            <h2 class="section-title">İletişim</h2>
-            <p class="section-subtitle">Randevu ve bilgi için bize ulaşın</p>
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <h3>📍 Adres</h3>
-                    <div class="contact-item">
-                        <strong>Klinik Adresi</strong>
-                        <span>
-                            Fatih Mahallesi<br>
-                            Osman Turan Caddesi<br>
-                            Canım Sitesi A Blok<br>
-                            No: 4  Kat: 1  Daire: 2<br>
-                            Ortahisar / Trabzon
-                        </span>
-                    </div>
-                    <a href="https://maps.google.com/?q=Fatih+Mahallesi+Osman+Turan+Caddesi+Canım+Sitesi+Ortahisar+Trabzon" 
-                       target="_blank" rel="noopener" class="map-link">
-                        Haritada Göster →
-                    </a>
-                </div>
-
-                <div class="contact-card">
-                    <h3>📞 Telefon & E-posta</h3>
-                    <div class="contact-item">
-                        <strong>Telefon</strong>
-                        <a href="tel:+904622236971">0462 223 69 71</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>E-posta</strong>
-                        <a href="mailto:dt_cevik@hotmail.com">dt_cevik@hotmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>Randevu</strong>
-                        <span>Randevu için lütfen telefonla arayınız.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2026 Dt. Hüseyin Çevik · Diş Hekimi · Trabzon</p>
-        </div>
-    </footer>
-</body>
-</html>
+            margin-bottom: 18px
