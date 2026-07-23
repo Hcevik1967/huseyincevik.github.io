@@ -3,134 +3,349 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diş Hekimi Hüseyin Çevik</title>
+    <title>Diş Hekimi Hüseyin Çevik | Trabzon</title>
     <style>
-        body { 
-            font-family: Arial, sans-serif; 
-            margin: 0; 
-            padding: 0; 
-            background: #f8f9fa; 
-            color: #333; 
-        }
-        header { 
-            background: linear-gradient(135deg, #0d6efd, #0a58ca); 
-            color: white; 
-            text-align: center; 
-            padding: 60px 20px; 
-        }
-        .header-photo {
-            width: 180px;
-            height: 180px;
-            border-radius: 50%;
-            border: 6px solid white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
-            object-fit: cover;
-        }
-        .container { 
-            max-width: 900px; 
-            margin: 0 auto; 
-            padding: 20px; 
-        }
-        h1 { margin: 0; font-size: 2.8em; }
-        .tagline { 
-            font-size: 1.4em; 
-            margin: 10px 0; 
-            font-style: italic; 
-            font-family: 'Georgia', 'Times New Roman', serif; 
-        }
-        .normal { font-style: normal; }
-        .section { 
-            margin: 40px 0; 
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f4f7fb; color: #1a1a1a; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+        header {
             background: white;
-            padding: 28px 30px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+            border-bottom: 1px solid #e9ecef;
+            padding: 16px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         }
-        .section h2 {
-            color: #0d6efd;
-            margin-top: 0;
+        .header-inner { 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+        }
+        nav a { 
+            color: #1a1a1a; 
+            text-decoration: none; 
+            margin: 0 18px; 
+            font-weight: 500; 
+            font-size: 1rem;
+        }
+        nav a:hover { color: #0b5ed7; }
+
+        .hero {
+            background: linear-gradient(135deg, #0b5ed7 0%, #084298 100%);
+            color: white;
+            padding: 50px 0 60px;
+        }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+        }
+        .hero-photo {
+            width: 170px;
+            height: 170px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.45);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            flex-shrink: 0;
+            background: rgba(255,255,255,0.15);
+        }
+        .hero-text {
+            text-align: center;
+            flex: 1;
+        }
+        .hero-text h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero-text .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+        .hero-text .slogan {
+            font-size: 1rem;
+            font-style: italic;
+            opacity: 0.85;
+            margin-bottom: 22px;
+        }
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #0b5ed7;
+            padding: 13px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             margin-bottom: 18px;
         }
-        a { color: #0d6efd; }
-        footer { 
-            background: #343a40; 
-            color: white; 
-            text-align: center; 
-            padding: 25px; 
-            margin-top: 30px;
+        .onam-note {
+            font-size: 0.95rem;
+            opacity: 0.95;
+            max-width: 480px;
+            margin: 0 auto 14px;
+            line-height: 1.55;
         }
-
-        /* Şiir kitapları önizleme */
-        .siir-onizleme {
+        .onam-links {
             display: flex;
-            gap: 18px;
             flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
             margin-top: 10px;
         }
-        .siir-onizleme a {
+        .onam-links a {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 9px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid rgba(255,255,255,0.35);
+        }
+        .onam-links a:hover {
+            background: rgba(255,255,255,0.35);
+        }
+
+        section { padding: 70px 0; }
+        .section-title { text-align: center; font-size: 1.9rem; margin-bottom: 12px; font-weight: 700; }
+        .section-subtitle { text-align: center; color: #5c636a; margin-bottom: 40px; }
+        .section-title::after {
+            content: "";
             display: block;
-            width: 140px;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-            transition: transform 0.25s ease;
+            width: 55px;
+            height: 3px;
+            background: #0b5ed7;
+            margin: 14px auto 0;
+            border-radius: 2px;
         }
-        .siir-onizleme a:hover {
-            transform: scale(1.05);
+
+        .about-card {
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 40px;
         }
-        .siir-onizleme img {
+        .about-logo {
+            width: 130px;
+            flex-shrink: 0;
+        }
+        .about-logo img {
             width: 100%;
-            height: 180px;
-            object-fit: cover;
+            height: auto;
             display: block;
+        }
+        .about-text {
+            flex: 1;
+            color: #5c636a;
+            font-size: 1.08rem;
+            line-height: 1.75;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+        }
+        .service-card {
+            background: white;
+            border-radius: 14px;
+            padding: 32px 24px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+        }
+        .service-card h3 { margin-bottom: 10px; color: #0b5ed7; font-size: 1.2rem; }
+        .service-card p { color: #5c636a; font-size: 0.95rem; }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+        .contact-card {
+            background: white;
+            border-radius: 14px;
+            padding: 32px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+        }
+        .contact-card h3 { color: #0b5ed7; margin-bottom: 20px; font-size: 1.2rem; }
+        .contact-item { margin-bottom: 18px; }
+        .contact-item strong {
+            display: block;
+            font-size: 0.82rem;
+            color: #5c636a;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+        .contact-item a, .contact-item span {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 500;
+        }
+        .map-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #0b5ed7;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        footer {
+            background: #111;
+            color: #999;
+            text-align: center;
+            padding: 28px 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 800px) {
+            .hero-inner { flex-direction: column; gap: 22px; }
+            .hero-photo { width: 140px; height: 140px; }
+            .hero-text h1 { font-size: 1.85rem; }
+            .about-card { flex-direction: column; text-align: center; gap: 25px; }
+            .about-logo { width: 110px; }
+            nav a { margin: 0 12px; font-size: 0.95rem; }
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="WhatsApp Image 2026-07-22 at 18.03.23.jpeg" alt="Dr. Hüseyin Çevik" class="header-photo">
-        <h1>Diş Hekimi Hüseyin Çevik</h1>
-        <p class="tagline normal">2004’ten beri</p>
-        <p class="tagline">Dişe Dokunur Bir Yaşam İçin</p>
+        <div class="container header-inner">
+            <nav>
+                <a href="#hakkimda">Hakkımda</a>
+                <a href="#hizmetler">Hizmetler</a>
+                <a href="#iletisim">İletişim</a>
+            </nav>
+        </div>
     </header>
 
-    <div class="container">
+    <section class="hero">
+        <div class="container hero-inner">
+            <img src="fotografim.jpeg" alt="Diş Hekimi Hüseyin Çevik" class="hero-photo">
 
-        <!-- Hasta Onam Formları -->
-        <div class="section">
-            <h2>Hasta Onam Formları</h2>
-            <p>Aşağıdaki formları indirebilirsiniz:</p>
-            <ul>
-                <li><a href="cerrahi onam.pdf" target="_blank">🔹 Cerrahi Onam Formu</a></li>
-                <li><a href="ortodonti onam.pdf" target="_blank">🔹 Ortodonti Onam Formu</a></li>
-                <li><a href="protez onam.pdf" target="_blank">🔹 Protez Onam Formu</a></li>
-                <li><a href="tedavi onam.pdf" target="_blank">🔹 Genel Tedavi Onam Formu</a></li>
-            </ul>
+            <div class="hero-text">
+                <h1>Diş Hekimi Hüseyin Çevik</h1>
+                <p class="subtitle">2004’ten beri</p>
+                <p class="slogan">Dişe Dokunur Bir Yaşam İçin</p>
+                
+                <a href="#iletisim" class="btn">Randevu Al / İletişim</a>
+
+                <p class="onam-note">
+                    Lütfen işlemden önce onam formlarını okuyun, 
+                    sormak istediklerinizi sorun ve muayenehanede size verilecek kâğıdı imzalayın.
+                </p>
+
+                <div class="onam-links">
+                    <a href="tedavi%20onam.pdf" target="_blank">Tedavi Onam</a>
+                    <a href="cerrahi%20onam.pdf" target="_blank">Cerrahi Onam</a>
+                    <a href="ortodonti%20onam.pdf" target="_blank">Ortodonti Onam</a>
+                    <a href="protez%20onam.pdf" target="_blank">Protez Onam</a>
+                </div>
+            </div>
+
+            <img src="WhatsApp%20Image%202026-07-22%20at%2018.03.23.jpeg" alt="Klinik" class="hero-photo">
         </div>
+    </section>
 
-        <!-- Yayımlanan Şiir Kitapları -->
-        <div class="section">
-            <h2>Yayımlanan Şiir Kitapları</h2>
-            <p>Kitap kapaklarını görmek için tıklayın:</p>
+    <section id="hakkimda">
+        <div class="container">
+            <h2 class="section-title">Hakkımda</h2>
+            <p class="section-subtitle">Güvenilir ve hasta odaklı diş hekimliği</p>
             
-            <div class="siir-onizleme">
-                <a href="siir 1.jpeg" target="_blank">
-                    <img src="siir 1.jpeg" alt="Şiir Kitabı 1">
-                </a>
-                <a href="siir 2.jpeg" target="_blank">
-                    <img src="siir 2.jpeg" alt="Şiir Kitabı 2">
-                </a>
-                <a href="siir 3.jpeg" target="_blank">
-                    <img src="siir 3.jpeg" alt="Şiir Kitabı 3">
-                </a>
+            <div class="about-card">
+                <div class="about-logo">
+                    <img src="logo.jpeg" alt="Logo">
+                </div>
+                <div class="about-text">
+                    2004 yılından bu yana Trabzon’da diş hekimliği yapıyorum. 
+                    Ege Üniversitesi Diş Hekimliği Fakültesi mezunuyum. 
+                    Hastalarımın ağız ve diş sağlığını en üst düzeyde korumak, 
+                    doğal ve sağlıklı gülüşler kazandırmak için modern tedavi yöntemleriyle hizmet veriyorum.
+                </div>
             </div>
         </div>
+    </section>
 
-    </div>
+    <section id="hizmetler">
+        <div class="container">
+            <h2 class="section-title">Hizmetlerimiz</h2>
+            <p class="section-subtitle">Kapsamlı ağız ve diş sağlığı çözümleri</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Genel Diş Tedavisi</h3>
+                    <p>Dolgu, kanal tedavisi, diş çekimi ve düzenli kontroller</p>
+                </div>
+                <div class="service-card">
+                    <h3>Estetik Diş Hekimliği</h3>
+                    <p>Diş beyazlatma, bonding ve laminate veneer uygulamaları</p>
+                </div>
+                <div class="service-card">
+                    <h3>Protez & İmplant</h3>
+                    <p>Sabit / hareketli protezler ve implant üstü restorasyonlar</p>
+                </div>
+                <div class="service-card">
+                    <h3>Koruyucu Tedavi</h3>
+                    <p>Diş taşı temizliği, flor uygulamaları ve ağız bakımı</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="iletisim">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <p class="section-subtitle">Randevu ve bilgi için bize ulaşın</p>
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <h3>📍 Adres</h3>
+                    <div class="contact-item">
+                        <strong>Klinik Adresi</strong>
+                        <span>
+                            Fatih Mahallesi<br>
+                            Osman Turan Caddesi<br>
+                            Canım Sitesi A Blok<br>
+                            No: 4  Kat: 1  Daire: 2<br>
+                            Ortahisar / Trabzon
+                        </span>
+                    </div>
+                    <a href="https://maps.google.com/?q=Fatih+Mahallesi+Osman+Turan+Caddesi+Canım+Sitesi+Ortahisar+Trabzon" 
+                       target="_blank" class="map-link">Haritada Göster →</a>
+                </div>
+
+                <div class="contact-card">
+                    <h3>📞 Telefon & E-posta</h3>
+                    <div class="contact-item">
+                        <strong>Telefon</strong>
+                        <a href="tel:+904622236971">0462 223 69 71</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>E-posta</strong>
+                        <a href="mailto:dt_cevik@hotmail.com">dt_cevik@hotmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Randevu</strong>
+                        <span>Randevu için lütfen telefonla arayınız.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; 2026 Diş Hekimi Hüseyin Çevik</p>
+        <div class="container">
+            <p>© 2026 Diş Hekimi Hüseyin Çevik · Trabzon</p>
+        </div>
     </footer>
 </body>
 </html>
