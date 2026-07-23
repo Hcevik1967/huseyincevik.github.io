@@ -10,39 +10,70 @@
             background: linear-gradient(135deg, #0d6efd, #0a58ca); 
             color: white; 
             text-align: center; 
-            padding: 60px 20px; 
+            padding: 40px 20px; 
+        }
+        .logo {
+            max-width: 280px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 12px;
         }
         .header-photo {
-            width: 180px;
-            height: 180px;
+            width: 160px;
+            height: 160px;
             border-radius: 50%;
-            border: 6px solid white;
+            border: 5px solid white;
             box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
-        h1 { margin: 0; font-size: 2.8em; }
+        h1 { margin: 0; font-size: 2.5em; }
         .tagline { 
-            font-size: 1.4em; 
-            margin: 10px 0; 
+            font-size: 1.3em; 
+            margin: 8px 0; 
             font-style: italic; 
             font-family: 'Georgia', 'Times New Roman', serif; 
         }
         .normal { font-style: normal; }
-        .section { margin: 50px 0; }
-        a { color: #0d6efd; }
-        footer { background: #343a40; color: white; text-align: center; padding: 30px; }
+        .section { margin: 40px 0; }
+        .contact-box {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            margin-top: 20px;
+        }
+        .contact-box p { margin: 12px 0; font-size: 1.15em; }
+        a { color: #0d6efd; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        footer { background: #343a40; color: white; text-align: center; padding: 25px; margin-top: 40px; }
     </style>
 </head>
 <body>
     <header>
+        <!-- LOGO -->
+        <img src="WhatsApp Image 2026-07-23 at 12.04.17.jpeg" alt="Logo" class="logo">
+        
+        <!-- Profil fotoğrafı -->
         <img src="WhatsApp Image 2026-07-22 at 18.03.23.jpeg" alt="Dr. Hüseyin Çevik" class="header-photo">
+        
         <h1>Diş Hekimi Hüseyin Çevik</h1>
         <p class="tagline normal">2004’ten beri</p>
         <p class="tagline">Dişe Dokunur Bir Yaşam İçin</p>
     </header>
 
     <div class="container">
+        <!-- İLETİŞİM -->
+        <div class="section">
+            <h2>İletişim</h2>
+            <div class="contact-box">
+                <p><strong>Adres:</strong> Buraya tam adresinizi yazın</p>
+                <p><strong>Telefon:</strong> <a href="tel:05XXXXXXXXX">05XX XXX XX XX</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/905XXXXXXXXX" target="_blank">Mesaj Gönder</a></p>
+            </div>
+        </div>
+
+        <!-- HASTA ONAM FORMLARI -->
         <div class="section">
             <h2>Hasta Onam Formları</h2>
             <p>Aşağıdaki formları indirebilirsiniz:</p>
