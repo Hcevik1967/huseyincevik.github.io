@@ -12,31 +12,63 @@
         header {
             background: white;
             border-bottom: 1px solid #e9ecef;
-            padding: 16px 0;
+            padding: 14px 0;
             position: sticky;
             top: 0;
             z-index: 100;
             box-shadow: 0 2px 10px rgba(0,0,0,0.04);
         }
         .header-inner { display: flex; justify-content: space-between; align-items: center; }
-        .logo img { height: 56px; width: auto; display: block; }
+        .logo img { height: 52px; width: auto; display: block; }
         nav a { color: #1a1a1a; text-decoration: none; margin-left: 28px; font-weight: 500; }
         nav a:hover { color: #0b5ed7; }
 
+        /* Hero with 3 columns */
         .hero {
             background: linear-gradient(135deg, #0b5ed7 0%, #084298 100%);
             color: white;
-            padding: 90px 0;
-            text-align: center;
+            padding: 50px 0;
         }
-        .hero h1 { font-size: 2.5rem; font-weight: 700; margin-bottom: 10px; }
-        .hero .subtitle { font-size: 1.15rem; opacity: 0.9; margin-bottom: 6px; }
-        .hero .slogan { font-size: 1.05rem; font-style: italic; opacity: 0.85; margin-bottom: 36px; }
+        .hero-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        .hero-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid rgba(255,255,255,0.4);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+            flex-shrink: 0;
+        }
+        .hero-text {
+            text-align: center;
+            flex: 1;
+        }
+        .hero-text h1 {
+            font-size: 2.3rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero-text .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-bottom: 4px;
+        }
+        .hero-text .slogan {
+            font-size: 1rem;
+            font-style: italic;
+            opacity: 0.85;
+            margin-bottom: 28px;
+        }
         .btn {
             display: inline-block;
             background: white;
             color: #0b5ed7;
-            padding: 14px 36px;
+            padding: 13px 32px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
@@ -124,11 +156,19 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.9rem; }
+        /* Mobile */
+        @media (max-width: 800px) {
+            .hero-inner {
+                flex-direction: column;
+                gap: 25px;
+            }
+            .hero-photo {
+                width: 140px;
+                height: 140px;
+            }
+            .hero-text h1 { font-size: 1.9rem; }
             nav { display: none; }
             .header-inner { justify-content: center; }
-            .logo img { height: 48px; }
         }
     </style>
 </head>
@@ -147,11 +187,20 @@
     </header>
 
     <section class="hero">
-        <div class="container">
-            <h1>Diş Hekimi Hüseyin Çevik</h1>
-            <p class="subtitle">2004’ten beri</p>
-            <p class="slogan">Dişe Dokunur Bir Yaşam İçin</p>
-            <a href="#iletisim" class="btn">Randevu Al / İletişim</a>
+        <div class="container hero-inner">
+            <!-- Sol: Senin fotoğrafın -->
+            <img src="fotografim.jpeg" alt="Diş Hekimi Hüseyin Çevik" class="hero-photo">
+
+            <!-- Orta: Yazılar -->
+            <div class="hero-text">
+                <h1>Diş Hekimi Hüseyin Çevik</h1>
+                <p class="subtitle">2004’ten beri</p>
+                <p class="slogan">Dişe Dokunur Bir Yaşam İçin</p>
+                <a href="#iletisim" class="btn">Randevu Al / İletişim</a>
+            </div>
+
+            <!-- Sağ: Klinik fotoğrafı -->
+            <img src="WhatsApp Image 2026-07-22 at 18.03.23.jpeg" alt="Klinik" class="hero-photo">
         </div>
     </section>
 
